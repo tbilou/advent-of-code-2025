@@ -12,21 +12,31 @@ fun readInputSplitByNewline(name: String) = Path("src/main/kotlin/$name.txt").re
 
 fun readInputAsString(name: String) = Path("src/main/kotlin/$name.txt").readText().trim()
 
-fun splitStingIntoColumns(input: String, cols: Int): List<List<String>>? {
+fun splitStingIntoColumns(input: String, numColumns: Int): List<List<String>>? {
     // Validate input
     if (input.length <= 1) return null
-    // Create a flat list (without whitespaces and newlines)
-    val input = input.replace("""[\s]+""".toRegex(), "")
+    // Create a flat list (with a spaces splitting the numbers)
+    val input = input.replace("""[\s]+""".toRegex(), " ")
 
     // Create a list to store the columns
-    val columns = MutableList(cols) { mutableListOf<String>() }
+    val columns = MutableList(numColumns) { mutableListOf<String>() }
 
     var listIndex = 0
-    input.forEachIndexed { i, c ->
-        if (i % cols == 0) listIndex = 0
-        columns[listIndex].add(c.toString())
-        listIndex++
+    val buffer = StringBuilder()
+    for (c in input) {
+        if (c == ' '){
+            // assign the buffer to the column list
+            columns[listIndex].add(buffer.toString())
+            buffer.clear()
+            if (listIndex == numColumns - 1) listIndex = 0 else listIndex++
+            continue
+        }
+        buffer.append(c)
     }
+    if (buffer.isNotEmpty())
+        columns[listIndex].add(buffer.toString())
+    // "1 2 3 4 5 6"
+
     return columns
 }
 
