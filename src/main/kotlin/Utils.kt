@@ -35,7 +35,6 @@ fun splitStingIntoColumns(input: String, numColumns: Int): List<List<String>>? {
     }
     if (buffer.isNotEmpty())
         columns[listIndex].add(buffer.toString())
-    // "1 2 3 4 5 6"
 
     return columns
 }
