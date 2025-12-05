@@ -22,7 +22,7 @@ If you're stuck with Kotlin-specific questions or anything related to this templ
 | 02  | [✓][day02] | [Gift Shop][aoc02]: Trying to keep it very basic this year. No crazy collection function chaining. Decided to do the operations based on strings. For part 1 it was just about finding strings with an even number of chars and spliting it in half. For part 2 almost went down the rabbit hole of trying to calculate the groups based on prime factorization. Went the "brute force" way by calculating all the possible groups, spliting the string with chunked and collapsing it all into Set. | 
 | 03  | [✓][day03]  | [Lobby][aoc03]: Solved it with brute force first, 12 nested for loops. In my defense, it was an optimized brute-force solution that ran in ~5s. I then implemented the correct algorithm and now solves it in 200ms                                                                                                                                                                                                                                                                                  | 
 | 04  | [✓][day04]  | [Printing Department][aoc04] It was easier than expected. Couldn't find my grid class from last years, so I asked an LLM to generate one                                                                                                                                                                                                                                                                                                                                                             | 
-| 05  | [][day05]  | [][aoc05]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 
+| 05  | [✓][day05]  | [Cafeteria][aoc05] First idea was to expand the ranges into a flat list, but after looking at the input it became obviously clear that it would be a possibility. First part was very easy but I went down the wrong path for part 2. I was over complicating things. Took me a while to give it up and restart but immediately found a much simpler solution. Reused the idRange from [day02]                                                                                                       | 
 | 06  | [][day06]  | [][aoc06]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 
 | 07  | [][day07]  | [][aoc07]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 
 | 08  | [][day08]  | [][aoc08]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 
@@ -44,18 +44,18 @@ If you're stuck with Kotlin-specific questions or anything related to this templ
 [aoc10]: https://adventofcode.com/2025/day/10
 [aoc11]: https://adventofcode.com/2025/day/11
 [aoc12]: https://adventofcode.com/2025/day/12
-[day01]: src/Day01.kt
-[day02]: src/Day02.kt
-[day03]: src/Day03.kt
-[day04]: src/Day04.kt
-[day05]: src/Day05_1.kt
-[day06]: src/Day06.kt
-[day07]: src/Day07.kt
-[day08]: src/Day08.kt
-[day09]: src/Day09.kt
-[day10]: src/Day10.kt
-[day11]: src/Day11.kt
-[day12]: src/Day12.kt
+[day01]: src/main/kotlin/Day01.kt
+[day02]: src/main/kotlin/Day02.kt
+[day03]: src/main/kotlin/Day03.kt
+[day04]: src/main/kotlin/Day04.kt
+[day05]: src/main/kotlin/Day05_1.kt
+[day06]: src/main/kotlin/Day06.kt
+[day07]: src/main/kotlin/Day07.kt
+[day08]: src/main/kotlin/Day08.kt
+[day09]: src/main/kotlin/Day09.kt
+[day10]: src/main/kotlin/Day10.kt
+[day11]: src/main/kotlin/Day11.kt
+[day12]: src/main/kotlin/Day12.kt
 
 [aoc]: https://adventofcode.com
 [docs]: https://kotlinlang.org/docs/home.html
